@@ -4,6 +4,7 @@ python-dotenv
 redis
 celery
 sqlalchemy
+stripe
 psycopg2-binary
 PyJWT==2.8.0
 google-generativeai
