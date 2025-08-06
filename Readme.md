@@ -117,12 +117,6 @@ Make sure Redis is running locally:
 redis-server
 ```
 
-### 6. Run Database Migrations (if needed)
-
-```bash
-# You may use raw SQL or a tool like Alembic for migration
-```
-
 ### 7. Start the FastAPI Server
 
 ```bash
@@ -132,6 +126,26 @@ uvicorn app.main:app --reload
 Your API should now be running at: `http://localhost:8000`
 
 ---
+
+## Deploy to Render
+
+Go to Render and click “New Web Service”.
+
+Connect your GitHub repository.
+
+Set the following in the Render dashboard:
+
+Build Command: pip install -r requirements.txt
+
+Start Command: uvicorn app.main:app --host 0.0.0.0 --port 10000
+
+Python Version: 3.10+
+
+Port: 10000
+
+Save and deploy.
+
+Your backend will be available at the Render-provided HTTPS URL.
 
 ##  Optional: Run Celery Worker (for background tasks)
 
