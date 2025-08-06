@@ -10,7 +10,5 @@ redis = redis.Redis(
     host=parsed_url.hostname,
     port=parsed_url.port,
     password=parsed_url.password,
-    ssl=True,  # Use SSL for Redis Cloud
-    decode_responses=True
+    decode_responses=True  # ✅ Do NOT use ssl=True
 )
-
