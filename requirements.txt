@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+python-dotenv
+redis
+celary
+sqlalchemy
+psycopg2-binary
+PyJWT==2.8.0
+google-generativeai
